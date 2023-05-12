@@ -7,6 +7,10 @@ var producer = new Producer(client);
 
 app.listen(3000);
 
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/index.html');
+});
+
 function handler(req, res) {
   res.writeHead(200);
   res.end('¡Hola, mundo!');
